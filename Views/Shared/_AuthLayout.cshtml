@@ -34,6 +34,21 @@
         }
     </style>
     <script src="https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2.min.js"></script>
+    <script>
+        function togglePasswordVisibility(inputId) {
+            var input = document.getElementById(inputId);
+            var icon = input.nextElementSibling.querySelector('i');
+            if (input.type === "text") {
+                input.type = "password";
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            } else {
+                input.type = "text";
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            }
+        }
+    </script>
 </head>
 <body class="e-bigger">
     <div class="auth-container">
